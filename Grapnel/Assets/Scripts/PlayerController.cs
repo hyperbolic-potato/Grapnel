@@ -38,9 +38,23 @@ public class PlayerController : MonoBehaviour
 
             if (hit)
             {
-                rb.linearVelocityY = 0; //im sure this isn't going to be complicit in some game-breaking physics exploits...
-                rb.AddForceY(jumpForce, ForceMode2D.Impulse);
-                
+                //rb.linearVelocityY = 0;
+                //im sure this isn't going to be complicit in some game-breaking physics exploits...
+                //it was :/
+                Rigidbody2D otherRB = hit.collider.gameObject.GetComponent<Rigidbody2D>();
+                if (otherRB != null && otherRB.bodyType != RigidbodyType2D.Dynamic)
+                {
+                    rb.AddForceY(jumpForce, ForceMode2D.Impulse);
+                   
+                }
+                else
+                {
+                    rb.AddForceY(jumpForce / 2, ForceMode2D.Impulse);
+                    otherRB.AddForceY(-jumpForce / 2, ForceMode2D.Impulse);
+                    
+                }
+                isJumping = false;
+
             }
         }
         
