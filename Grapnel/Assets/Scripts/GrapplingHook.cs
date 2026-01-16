@@ -44,15 +44,15 @@ public class GrapplingHook : MonoBehaviour
 
                 //turn that into a number between 1 & -1 depending on the sharpness of said angle
                 shear = (shear / 180 - 0.5f) * 2f;
-                Debug.Log(shear);
+                
 
                 //multiply the shear coefficient accordingly to make the grapple spool out when pointed towards and in when pointed away
-                grappleLength -= Time.deltaTime * shear * spoolSpeed;
+                grappleLength += Time.deltaTime * -shear * spoolSpeed;
 
 
 
 
-                if (grappleLength > 0) grappleLength -= Time.deltaTime * spoolSpeed;
+                if (grappleLength > 0) grappleLength += Time.deltaTime * -shear * spoolSpeed;
                 else grappleLength = 0;
             }
             
