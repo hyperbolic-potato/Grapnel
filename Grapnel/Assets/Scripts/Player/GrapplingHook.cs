@@ -10,7 +10,7 @@ public class GrapplingHook : MonoBehaviour
     public float maxGrappleDistance, grappleStrength, spoolSpeed;
     private float grappleLength;
     bool isGrappled, isReeling;
-    Vector2 grapplePoint, grappleVector, localGrappleOffset;
+    Vector2 grapplePoint, grappleVector;
     Rigidbody2D grappledRB;
     GameObject dynamicGrapplePoint;
     
@@ -47,11 +47,6 @@ public class GrapplingHook : MonoBehaviour
                 
 
                 //multiply the shear coefficient accordingly to make the grapple spool out when pointed towards and in when pointed away
-                grappleLength += Time.deltaTime * -shear * spoolSpeed;
-
-
-
-
                 if (grappleLength > 0) grappleLength += Time.deltaTime * -shear * spoolSpeed;
                 else grappleLength = 0;
             }
@@ -106,10 +101,11 @@ public class GrapplingHook : MonoBehaviour
     public void GrappleLengthCorrection() // will keep the grapple from getting longer than it was when it was fired by applying forces to the character
     {
 
-        Vector2 error = grappleVector - grappleVector.normalized * grappleLength;
+        Vector2 error = grappleVector - grappleVector.normalized * grappleLength; //error is actual length minus expected length
         if (grappledRB != null && grappledRB.bodyType != RigidbodyType2D.Dynamic)
         {
             if (grappleVector.magnitude > grappleLength) rb.AddForceAtPosition(error * grappleStrength, transform.position);
+            //if the other RB isn't dynamic, just the player moves
         }
         else
         {
@@ -119,12 +115,14 @@ public class GrapplingHook : MonoBehaviour
             {
                 rb.AddForceAtPosition(error * grappleStrength/2, transform.position);
                 grappledRB.AddForceAtPosition(-error * grappleStrength/2, grapplePoint);
+                
             }
+            //otherwise, both the grappled object and the player are affected in opposite directions at half strength. Physics, baby.
         }
 
     }
 
-    public void GrappleReel(InputAction.CallbackContext context) // will spool in the grapple
+    public void GrappleReel(InputAction.CallbackContext context) // the input function that will spool in the grapple
     {
         if(context.performed) isReeling = true;
         else isReeling = false;

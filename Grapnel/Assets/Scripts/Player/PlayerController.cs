@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour
                 {
                     rb.AddForceY(jumpForce / 2, ForceMode2D.Impulse);
                     otherRB.AddForceY(-jumpForce / 2, ForceMode2D.Impulse);
+                    //prevents the player from flying via rigidbody abuse
                     
                 }
                 isJumping = false;
