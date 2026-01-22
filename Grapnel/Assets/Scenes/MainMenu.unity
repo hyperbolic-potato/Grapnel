@@ -978,53 +978,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1931948377}
   m_CullTransparentMesh: 1
---- !u!1 &1967350351
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1967350353}
-  - component: {fileID: 1967350352}
-  m_Layer: 0
-  m_Name: LevelLoader
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1967350352
+--- !u!114 &1967350352 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1627383025678873570, guid: 8e35921d4ec681941ac46f35dd64f359, type: 3}
+  m_PrefabInstance: {fileID: 8078733673452259453}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967350351}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3fbcd9b91d34b647a64ae370fdf27f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  savePath: 
-  defaultSaveData:
-    levelIndex: 0
---- !u!4 &1967350353
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967350351}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 76.33061, y: -106.46893, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1978104187
 GameObject:
   m_ObjectHideFlags: 0
@@ -1524,6 +1488,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2064574243}
   m_CullTransparentMesh: 1
+--- !u!1001 &8078733673452259453
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 664178180674341874, guid: 8e35921d4ec681941ac46f35dd64f359, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 76.33061
+      objectReference: {fileID: 0}
+    - target: {fileID: 664178180674341874, guid: 8e35921d4ec681941ac46f35dd64f359, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -106.46893
+      objectReference: {fileID: 0}
+    - target: {fileID: 664178180674341874, guid: 8e35921d4ec681941ac46f35dd64f359, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664178180674341874, guid: 8e35921d4ec681941ac46f35dd64f359, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 664178180674341874, guid: 8e35921d4ec681941ac46f35dd64f359, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664178180674341874, guid: 8e35921d4ec681941ac46f35dd64f359, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664178180674341874, guid: 8e35921d4ec681941ac46f35dd64f359, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664178180674341874, guid: 8e35921d4ec681941ac46f35dd64f359, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664178180674341874, guid: 8e35921d4ec681941ac46f35dd64f359, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664178180674341874, guid: 8e35921d4ec681941ac46f35dd64f359, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412282678574215950, guid: 8e35921d4ec681941ac46f35dd64f359, type: 3}
+      propertyPath: m_Name
+      value: LevelLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 1627383025678873570, guid: 8e35921d4ec681941ac46f35dd64f359, type: 3}
+      propertyPath: defaultSaveData.levelIndex
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8e35921d4ec681941ac46f35dd64f359, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1531,4 +1556,4 @@ SceneRoots:
   - {fileID: 1978104190}
   - {fileID: 1519593816}
   - {fileID: 850548113}
-  - {fileID: 1967350353}
+  - {fileID: 8078733673452259453}

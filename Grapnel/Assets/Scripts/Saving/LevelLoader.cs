@@ -7,6 +7,7 @@ public class LevelLoader : MonoBehaviour
 {
     public string savePath;
     public SaveData defaultSaveData;
+    public SaveData currentSaveData;
     public static LevelLoader instance;
 
 
@@ -32,14 +33,15 @@ public class LevelLoader : MonoBehaviour
 
     public void New()
     {
-        SaveToFile(defaultSaveData);
-        LoadLevel(defaultSaveData.levelIndex);
+        currentSaveData = defaultSaveData;
+        SaveToFile(currentSaveData);
+        LoadLevel(currentSaveData.levelIndex);
     }
 
     public void Load()
     {
-        SaveData data = LoadFromFile();
-        LoadLevel(data.levelIndex);
+        currentSaveData = LoadFromFile();
+        LoadLevel(currentSaveData.levelIndex);
     }
 
     public void Menu()
