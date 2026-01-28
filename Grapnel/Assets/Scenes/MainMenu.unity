@@ -119,11 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &155888624 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1412282678574215950, guid: 8e35921d4ec681941ac46f35dd64f359, type: 3}
-  m_PrefabInstance: {fileID: 8078733673452259453}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &355574551
 GameObject:
   m_ObjectHideFlags: 0
@@ -988,22 +983,10 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1627383025678873570, guid: 8e35921d4ec681941ac46f35dd64f359, type: 3}
   m_PrefabInstance: {fileID: 8078733673452259453}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 155888624}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3fbcd9b91d34b647a64ae370fdf27f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1967350354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 155888624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00911d2638fb8ef418102c22be97a66c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1978104187
@@ -1017,6 +1000,7 @@ GameObject:
   - component: {fileID: 1978104190}
   - component: {fileID: 1978104189}
   - component: {fileID: 1978104188}
+  - component: {fileID: 1978104191}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1098,6 +1082,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1978104191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978104187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!1 &1989532790
 GameObject:
   m_ObjectHideFlags: 0
@@ -1564,10 +1592,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1412282678574215950, guid: 8e35921d4ec681941ac46f35dd64f359, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1967350354}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e35921d4ec681941ac46f35dd64f359, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

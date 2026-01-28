@@ -44,13 +44,14 @@ public class PlayerController : MonoBehaviour
                 Rigidbody2D otherRB = hit.collider.gameObject.GetComponent<Rigidbody2D>();
                 if (otherRB != null && otherRB.bodyType != RigidbodyType2D.Dynamic)
                 {
+                    rb.linearVelocityY = 0;
                     rb.AddForceY(jumpForce, ForceMode2D.Impulse);
                    
                 }
                 else
                 {
-                    rb.AddForceY(jumpForce / 2, ForceMode2D.Impulse);
-                    otherRB.AddForceY(-jumpForce / 2, ForceMode2D.Impulse);
+                    rb.AddForceY(jumpForce, ForceMode2D.Impulse);
+                    otherRB.AddForceY(-jumpForce, ForceMode2D.Impulse);
                     //prevents the player from flying via rigidbody abuse
                     
                 }
